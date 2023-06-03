@@ -1,0 +1,120 @@
+@import url(//db.onlinewebfonts.com/c/f02cf2e6e27a17bcfe9efa18c041c208?family=Redcollar);
+@import url(//db.onlinewebfonts.com/c/791b34a71c48acc600f240e9fdb57fb6?family=TT+Commons);
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+    font-family: 'TT Commons';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+
+h1, h2, p, span {
+    color: white;
+}
+
+h1, h2 {
+    font-family: 'Redcollar';
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+h2 {
+    letter-spacing: 0;
+    line-height: 16px;
+    font-size: 16px;
+}
+
+body {
+    background-color: black;
+    padding: 40px;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 31px;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+main section {
+    height: 100%;
+}
+
+.union {
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 25.78%;
+    right: 28.16%;
+    top: 27.81%;
+    bottom: 53.86%;
+
+    background: linear-gradient(338.79deg, rgba(245, 27, 27, 0.5) 1.29%, rgba(255, 98, 98, 0.5) 104.32%);
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    transform: rotate(-8.81deg);
+}
+
+.rectangle {
+    position: relative;
+    top: 0;
+}
+#curved-corner-bottomleft,
+#curved-corner-bottomright {
+  width: 30px;
+  height: 19px;
+  overflow: hidden;
+  position: relative;
+}
+
+#curved-corner-bottomleft:before,
+#curved-corner-bottomright:before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  border-radius: 50%;
+}
+#curved-corner-bottomleft:before {
+  bottom: 0;
+  left: 0;
+  box-shadow: -10px 10px 0 0 blue;
+}
+#curved-corner-bottomright:before {
+  bottom: 0;
+  right: 0;
+  box-shadow: 10px 10px 0 0 blue;
+}
+
+.about {
+    background-color: #F51B1B;
+    padding: 40px 24px;
+    border-radius: 24px 24px 0px 0px;
+}
+
+.about * {
+    font-size: 20px;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+}
+
+
+
+.contacts {
+
+}

@@ -8,9 +8,9 @@
     font-family: 'TT Commons';
     font-size: 18px;
     font-weight: 400;
-    line-height: 24px;
     letter-spacing: -0.01em;
     text-align: left;
+    box-sizing: border-box;
 }
 
 h1, h2, p, span {
@@ -35,12 +35,20 @@ h2 {
 body {
     background-color: black;
     padding: 40px;
+    height: 831px;
 }
 
 .logo {
     position: absolute;
-    top: 30px;
-    right: 40px;
+    top: -10px;
+    right: 0;
+    width: 240px;
+    height: 24px;
+}
+
+.logo>img {
+    width: 100%;
+    height: 100%;
 }
 
 main {
@@ -49,72 +57,303 @@ main {
     gap: 31px;
     max-width: 1440px;
     margin: 0 auto;
-    height: 100%;
-}
-
-main section {
-    height: 100%;
-}
-
-.union {
-    box-sizing: border-box;
-
-    position: absolute;
-    left: 25.78%;
-    right: 28.16%;
-    top: 27.81%;
-    bottom: 53.86%;
-
-    background: linear-gradient(338.79deg, rgba(245, 27, 27, 0.5) 1.29%, rgba(255, 98, 98, 0.5) 104.32%);
-    border: 0.5px solid rgba(255, 255, 255, 0.3);
-    transform: rotate(-8.81deg);
-}
-
-.rectangle {
     position: relative;
-    top: 0;
-}
-#curved-corner-bottomleft,
-#curved-corner-bottomright {
-  width: 30px;
-  height: 19px;
-  overflow: hidden;
-  position: relative;
 }
 
-#curved-corner-bottomleft:before,
-#curved-corner-bottomright:before {
-  content: "";
-  width: 200%;
-  height: 200%;
-  position: absolute;
-  border-radius: 50%;
+.container-svg-24 {
+    width: 24px;
+    height: 24px;
 }
-#curved-corner-bottomleft:before {
-  bottom: 0;
-  left: 0;
-  box-shadow: -10px 10px 0 0 blue;
+
+/* curved shape */
+.curved-shape {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: -19px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 20px;
+    margin: 0 auto;
+    /* background: linear-gradient(to right, transparent 50%, #F51B1B 50% + 1px, transparent 50%); */
 }
-#curved-corner-bottomright:before {
-  bottom: 0;
-  right: 0;
-  box-shadow: 10px 10px 0 0 blue;
+
+.curved-right,
+.curved-left {
+    width: 30px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.curved-right:before,
+.curved-left:before {
+    content: "";
+    display: block;
+    width: 200%;
+    height: 205%;
+    position: absolute;
+    border-radius: 60%;
+    bottom: 0;
+}
+.curved-right:before {
+    left: 0;
+    box-shadow: -10px 10px 0 0 #F51B1B;
+    transform: rotate(6deg);
+}
+.curved-left:before {
+    right: 0;
+    box-shadow: 10px 10px 0 0 #F51B1B;
+    transform: rotate(-6deg);
+}
+
+/* curved shape transparent */
+.curved-shape-transparent {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    left: 56px;
+    transform: scale(-1, -1);
+    top: -1px;
+    background: linear-gradient(to top, black 0%, transparent 1%);
+}
+
+.curved-right-transparent,
+.curved-left-transparent {
+    width: 30px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.curved-right-transparent:before,
+.curved-left-transparent:before {
+    content: "";
+    display: block;
+    width: 200%;
+    height: 210%;
+    position: absolute;
+    border-radius: 60%;
+    border: solid white 1px;
+    bottom: 0;
+}
+.curved-right-transparent:before {
+    left: -1px;
+    box-shadow: -10px 10px 0 0 black;
+    transform: rotate(6deg);
+}
+.curved-left-transparent:before {
+    right: -1px;
+    box-shadow: 10px 10px 0 0 black;
+    transform: rotate(-6deg);
+}
+
+.personal-information {
+    width: 322px;
+    position: relative;
+}
+
+.personal-information>.glasses {
+    position: absolute;
+    top: 30px;
+    left: 118px;
+    transform: scale(1.2) rotate(9deg);
+}
+
+.personal-information>img {
+    width: 322px;
+    margin-bottom: -29px;
 }
 
 .about {
     background-color: #F51B1B;
     padding: 40px 24px;
     border-radius: 24px 24px 0px 0px;
+    position: relative;
+    min-height: 454px;
 }
 
-.about * {
+.about span {
     font-size: 20px;
-    font-size: 24px;
     letter-spacing: -0.02em;
 }
 
+.name {
+    margin-bottom: 40px;
+}
 
+.name h1 {
+    margin-bottom: 8px;
+}
 
 .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.contacts>div{
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+}
+
+.contacts>div span {
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-break: anywhere;
+}
+
+.main-information {
+    margin-top: 18px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    max-width: 690px;
+    margin-bottom: 33px;
+}
+
+.text>p {
+    margin-bottom: 16px;
+}
+
+.text>p:last-child {
+    margin-bottom: 0;
+}
+
+.qualifications-and-skills {
+    width: 100%;
+    height: 100%;
+    border: solid 1px white;
+    position: relative;
+    padding: 47px 49px 48px 27px;
+}
+
+.qualifications-and-skills-section {
+    display: flex;
+    flex-direction: row;
+    gap: 72px;
+    padding: 20px 0;
+    border-bottom: rgba(255, 255, 255, 0.4) 1px solid;
+}
+
+.qualifications-and-skills-section:nth-child(2) {
+    padding: 0 0 20px;
+}
+
+.qualifications-and-skills-section:last-child {
+    border: none;
+    padding: 20px 0 0;
+}
+
+.qualifications-and-skills-section>h2 {
+    width: 124px;
+}
+
+.qualifications-and-skills-section>div {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.qualifications-and-skills-section>ul{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item .item-description {
+    opacity: 0.4;
+}
+
+@media (width < 361px) {
+    * {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    body {
+        padding: 20px;
+        height: auto;
+    }
+
+    .logo {
+        left: 0;
+        top: -72px;
+        width: 220px;
+        height: 22px;
+    }
+
+    main {
+        margin-top: 70px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .personal-information {
+        width: 320px;
+    }
+
+    .about {
+        min-height: 288px;
+    }
+
+    .name 
+
+    .text {
+        margin-bottom: 20px;
+    }
+
+    .curved-shape-transparent {
+        left: 50%;
+        transform: translateX(-50%) scale(-1, -1);
+    }
+
+    .qualifications-and-skills {
+        padding: 40px 15px 30px;
+    }
+
+    .qualifications-and-skills-section {
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px 0;
+    }
+
+    .qualifications-and-skills-section:nth-child(2) {
+        padding: 0 0 24px;
+    }
+
+    .qualifications-and-skills-section:last-child {
+        padding: 24px 0 0;
+    }
+
+    .qualifications-and-skills-section>div {
+        gap: 12px;
+    }
+
+    .qualifications-and-skills-section>ul {
+        gap: 16px;
+    }
 }

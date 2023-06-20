@@ -1,11 +1,24 @@
-@import url(//db.onlinewebfonts.com/c/f02cf2e6e27a17bcfe9efa18c041c208?family=Redcollar);
-@import url(//db.onlinewebfonts.com/c/791b34a71c48acc600f240e9fdb57fb6?family=TT+Commons);
+@font-face {
+    font-family: "Redcollar";
+    src: url("./fonts/Redcollar.woff2") format("woff2"),
+         url("./fonts/Redcollar.woff") format("woff"),
+         url("./fonts/Redcollar.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "TT-Commons";
+    src: url("./fonts/TTCommons.woff2") format("woff2"),
+         url("./fonts/TTCommons.woff") format("woff"),
+         url("./fonts/TTCommons.ttf") format("truetype");
+    font-weight: 400;
+}
 
 * {
     margin: 0;
     padding: 0;
     line-height: 24px;
-    font-family: 'TT Commons';
+    font-family: "TT-Commons", sans-serif;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: -0.01em;
@@ -18,7 +31,7 @@ h1, h2, p, span {
 }
 
 h1, h2 {
-    font-family: 'Redcollar';
+    font-family: "Redcollar", sans-serif;
 }
 
 h1 {
@@ -76,7 +89,7 @@ main {
     width: 60px;
     height: 20px;
     margin: 0 auto;
-    /* background: linear-gradient(to right, transparent 50%, #F51B1B 50% + 1px, transparent 50%); */
+    background: linear-gradient(to right, transparent 50%, #F51B1B 50% + 1px, transparent 50%);
 }
 
 .curved-right,
